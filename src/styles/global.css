@@ -1,0 +1,68 @@
+/* styles/global.css */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --card-bg: #f5f5f5;
+    --border-color: #cccccc;
+  }
+  
+  body.dark {
+    --bg-color: #1a1a1a;
+    --text-color: #f5f5f5;
+    --card-bg: #2a2a2a;
+    --border-color: #444;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .dark-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  
+  .ticket-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .ticket-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .ticket-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
